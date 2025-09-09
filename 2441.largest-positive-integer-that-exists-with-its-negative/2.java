@@ -14,8 +14,8 @@ class Solution {
         int ans = -1;
         for (int num : nums) {
             int absNum = Math.abs(num);
-            if (absNum > ans && set.contains(-num)) {
-                ans = absNum;
+            if (set.contains(-num)) {
+                ans = Math.max(ans, absNum);
             }
             set.add(num);
         }
